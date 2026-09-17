@@ -1,156 +1,466 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MB66 - Trang giới thiệu</title>
+  <!-- Tiêu đề có thể xuất hiện trên Google -->
+  <title>MB66 - Trang giới thiệu và liên kết truy cập</title>
 
-<style>
-*{
-    box-sizing:border-box;
-}
+  <!-- Mô tả có thể xuất hiện dưới tiêu đề Google -->
+  <meta name="description"
+        content="Trang giới thiệu MB66, thông tin truy cập, đăng ký và các nội dung liên quan. Trang giới thiệu độc lập.">
 
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#fff;
-}
+  <meta name="robots" content="index, follow">
 
-.top{
-    height:95px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
-}
+  <!-- Đổi URL này nếu link GitHub Pages của bạn khác -->
+  <link rel="canonical"
+        href="https://tdai2289-max.github.io/mb66/">
 
-.logo{
-    font-size:48px;
-    font-weight:bold;
-    color:red;
-}
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
 
-.buttons{
-    position:absolute;
-    right:15%;
-}
+  <!-- Khi chia sẻ link lên Facebook/Zalo -->
+  <meta property="og:title"
+        content="MB66 - Trang giới thiệu và liên kết truy cập">
 
-.btn{
-    display:inline-block;
-    padding:13px 28px;
-    margin:5px;
-    border-radius:7px;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
+  <meta property="og:description"
+        content="Thông tin và liên kết truy cập MB66.">
 
-.register{
-    background:#ff7300;
-}
+  <meta property="og:type" content="website">
 
-.login{
-    background:#1976d2;
-}
+  <meta property="og:url"
+        content="https://tdai2289-max.github.io/mb66/">
 
-.menu{
-    background:red;
-    padding:22px;
-    text-align:center;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-.menu span{
-    color:white;
-    font-weight:bold;
-    margin:0 15px;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: white;
+      color: #222;
+    }
 
-.banner{
-    max-width:1140px;
-    margin:auto;
-    min-height:360px;
-    background:#f1f1f1;
-    text-align:center;
-    padding:75px 20px;
-}
+    /* PHẦN ĐẦU */
+    .header {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 25px;
+    }
 
-.banner h1{
-    color:red;
-    font-size:45px;
-}
+    .logo {
+      font-size: 50px;
+      font-weight: 900;
+      color: #f00000;
+      line-height: 1;
+      text-align: center;
+    }
 
-.bigbtn{
-    display:inline-block;
-    background:#ff7300;
-    color:white;
-    padding:18px 40px;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-    margin-top:20px;
-}
+    .logo small {
+      display: block;
+      font-size: 15px;
+      margin-top: 7px;
+      letter-spacing: 1px;
+    }
 
-.notice{
-    text-align:center;
-    padding:15px;
-    font-size:13px;
-    color:#666;
-}
-</style>
+    .header-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 7px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn-register {
+      background: #ff7200;
+    }
+
+    .btn-login {
+      background: #1479d7;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    /* MENU */
+    .menu {
+      background: #f40000;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+      display: inline-block;
+      padding: 5px;
+    }
+
+    /* BANNER */
+    .banner {
+      max-width: 1140px;
+      margin: 0 auto;
+      min-height: 390px;
+      background:
+        linear-gradient(135deg, #fff 0%, #fff3f3 60%, #ffdede 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .banner h1 {
+      color: #ed0000;
+      font-size: 54px;
+      margin: 0 0 15px;
+    }
+
+    .banner h2 {
+      font-size: 34px;
+      margin: 10px 0;
+    }
+
+    .banner p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    .big-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 17px 40px;
+      background: #ff7200;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 19px;
+      font-weight: bold;
+    }
+
+    /* 4 Ô PHÍA DƯỚI */
+    .section-title {
+      text-align: center;
+      color: #e60000;
+      font-size: 27px;
+      margin: 35px 15px;
+    }
+
+    .features {
+      max-width: 1140px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      padding: 0 20px 40px;
+    }
+
+    .feature {
+      background: #fff5f5;
+      border: 1px solid #ffd5d5;
+      border-radius: 12px;
+      padding: 30px 15px;
+      text-align: center;
+    }
+
+    .feature .icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      color: #d80000;
+      margin-bottom: 15px;
+    }
+
+    .feature a {
+      display: inline-block;
+      padding: 12px 20px;
+      color: white;
+      background: #d60000;
+      text-decoration: none;
+      border-radius: 20px;
+      font-weight: bold;
+    }
+
+    /* GIỚI THIỆU */
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px 20px;
+      line-height: 1.7;
+    }
+
+    .content h2 {
+      color: #e00000;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 30px;
+      background: #222;
+      color: #ddd;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    footer p {
+      margin: 8px 0;
+    }
+
+    /* ĐIỆN THOẠI */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .logo {
+        font-size: 42px;
+      }
+
+      .menu a {
+        margin: 5px 7px;
+        font-size: 14px;
+      }
+
+      .banner h1 {
+        font-size: 42px;
+      }
+
+      .banner h2 {
+        font-size: 25px;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+
+      .header-buttons {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .btn {
+        padding: 12px 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="top">
+  <header class="header">
 
     <div class="logo">
-        MB66
+      MB66
+      <small>TRANG GIỚI THIỆU</small>
     </div>
 
-    <div class="buttons">
+    <div class="header-buttons">
 
-        <a class="btn register"
-           href="https://mbaac.cc?r=JGG9MO">
-           ĐĂNG KÝ
-        </a>
+      <a class="btn btn-register"
+         href="https://mbaac.cc?r=JGG9MO"
+         rel="nofollow">
+        ĐĂNG KÝ
+      </a>
 
-        <a class="btn login"
-           href="https://mbaac.cc?r=JGG9MO">
-           ĐĂNG NHẬP
-        </a>
+      <a class="btn btn-login"
+         href="https://mbaac.cc?r=JGG9MO"
+         rel="nofollow">
+        ĐĂNG NHẬP
+      </a>
 
     </div>
 
-</div>
+  </header>
 
-<div class="menu">
-    <span>MB66</span>
-    <span>THỂ THAO</span>
-    <span>CASINO</span>
-    <span>BẮN CÁ</span>
-    <span>KHUYẾN MÃI</span>
-    <span>HƯỚNG DẪN</span>
-</div>
 
-<div class="banner">
+  <nav class="menu">
 
-    <h1>MB66</h1>
+    <a href="#home">TRANG CHỦ</a>
 
-    <h2>TRANG GIỚI THIỆU</h2>
+    <a href="#thethao">THỂ THAO</a>
 
-    <p>Nhấn nút bên dưới để truy cập trang đối tác.</p>
+    <a href="#casino">CASINO</a>
 
-    <a class="bigbtn"
-       href="https://mbaac.cc?r=JGG9MO">
-       ĐĂNG KÝ NGAY
-    </a>
+    <a href="#khuyenmai">KHUYẾN MÃI</a>
 
-</div>
+    <a href="#huongdan">HƯỚNG DẪN</a>
 
-<div class="notice">
-    Trang giới thiệu độc lập. Khi bấm các nút, bạn sẽ được chuyển sang website khác.
-</div>
+  </nav>
+
+
+  <main>
+
+    <section class="banner" id="home">
+
+      <div>
+
+        <h1>MB66</h1>
+
+        <h2>TRANG GIỚI THIỆU & LIÊN KẾT TRUY CẬP</h2>
+
+        <p>
+          Nhấn nút bên dưới để chuyển sang website đối tác.
+        </p>
+
+        <a class="big-button"
+           href="https://mbaac.cc?r=JGG9MO"
+           rel="nofollow">
+          ĐĂNG KÝ NGAY
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <h2 class="section-title">
+      ⭐ THÔNG TIN & LIÊN KẾT MB66
+    </h2>
+
+
+    <section class="features">
+
+      <div class="feature">
+
+        <div class="icon">📝</div>
+
+        <h3>ĐĂNG KÝ</h3>
+
+        <a href="https://mbaac.cc?r=JGG9MO"
+           rel="nofollow">
+          ĐĂNG KÝ
+        </a>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="icon">🔐</div>
+
+        <h3>ĐĂNG NHẬP</h3>
+
+        <a href="https://mbaac.cc?r=JGG9MO"
+           rel="nofollow">
+          ĐĂNG NHẬP
+        </a>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="icon">🎁</div>
+
+        <h3>KHUYẾN MÃI</h3>
+
+        <a href="https://mbaac.cc?r=JGG9MO"
+           rel="nofollow">
+          XEM NGAY
+        </a>
+
+      </div>
+
+
+      <div class="feature">
+
+        <div class="icon">📖</div>
+
+        <h3>HƯỚNG DẪN</h3>
+
+        <a href="https://mbaac.cc?r=JGG9MO"
+           rel="nofollow">
+          TRUY CẬP
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section class="content">
+
+      <h2>Giới thiệu</h2>
+
+      <p>
+        Đây là trang giới thiệu độc lập cung cấp thông tin và
+        liên kết truy cập. Khi nhấn vào các nút đăng ký,
+        đăng nhập hoặc các liên kết phía trên, người dùng
+        sẽ được chuyển sang website bên ngoài.
+      </p>
+
+      <h2 id="thethao">Thể thao</h2>
+
+      <p>
+        Thông tin tổng hợp về các nội dung thể thao và
+        các dịch vụ liên quan.
+      </p>
+
+      <h2 id="casino">Casino</h2>
+
+      <p>
+        Khu vực giới thiệu các nội dung giải trí có trên
+        website đối tác.
+      </p>
+
+      <h2 id="khuyenmai">Khuyến mãi</h2>
+
+      <p>
+        Theo dõi thông tin ưu đãi trực tiếp tại website
+        được liên kết.
+      </p>
+
+      <h2 id="huongdan">Hướng dẫn</h2>
+
+      <p>
+        Bạn có thể sử dụng các nút phía trên để chuyển tới
+        trang đăng ký hoặc đăng nhập.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      MB66 - Trang giới thiệu độc lập
+    </p>
+
+    <p>
+      Website này có chứa liên kết dẫn tới website bên ngoài.
+    </p>
+
+  </footer>
 
 </body>
 </html>
