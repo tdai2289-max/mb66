@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tdai2289-max.github.io/mb66/sitemap.xml
